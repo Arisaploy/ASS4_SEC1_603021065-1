@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name='ASS4'
+rootProject.name='asslab4ui'

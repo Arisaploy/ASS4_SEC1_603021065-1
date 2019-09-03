@@ -1,4 +1,4 @@
-package com.example.ass4
+package com.example.asslab4ui
 
 import org.junit.Test
 

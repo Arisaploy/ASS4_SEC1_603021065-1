@@ -1,13 +1,12 @@
-package com.example.ass4
+package com.example.asslab4ui
 
-import android.app.Activity;
 import android.app.DatePickerDialog
-import android.view.View
-import android.widget.*
-import kotlinx.android.synthetic.main.activity_main.*
-import android.widget.RadioGroup
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.RadioButton
+import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
 public class MainActivity : AppCompatActivity() {
@@ -21,9 +20,10 @@ public class MainActivity : AppCompatActivity() {
         val day = c.get(Calendar.DAY_OF_MONTH)
 
         btn_pickDate.setOnClickListener{
-            val dpd = DatePickerDialog(this,DatePickerDialog.OnDateSetListener{view, mYear, mMonth, mDay ->
-                text_date.setText(""+mDay+"/"+mMonth+"/"+mYear)
-            },year, month, day)
+            val dpd = DatePickerDialog(this,
+                DatePickerDialog.OnDateSetListener{ view, mYear, mMonth, mDay ->
+                    text_date.setText(""+mDay+"/"+mMonth+"/"+mYear)
+                },year, month, day)
             dpd.show()
         }
     }
